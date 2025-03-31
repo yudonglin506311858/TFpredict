@@ -1,0 +1,8 @@
+export(TFpredict)
+export(get_promoter_sequences)
+import(Biostrings)
+import(TFBSTools)
+import(JASPAR2022)
+import(BSgenome.Hsapiens.UCSC.hg19)
+import(BSgenome.Mmusculus.UCSC.mm10)
+import(methods)

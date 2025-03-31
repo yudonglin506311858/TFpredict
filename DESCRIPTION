@@ -1,0 +1,18 @@
+Package: TFpredict.R
+Title: Transcription Factor Prediction from Promoter Sequences
+Version: 0.1.0
+Authors@R: person("Donglin", "Yu", email = "yudonglin@stu.pku.edu.cn", role = c("aut", "cre"))
+Description: Predicts transcription factors binding to promoter regions of target genes using JASPAR database.
+License: GPL-3
+Depends: R (>= 3.6.0)
+Imports: 
+    Biostrings,
+    TFBSTools,
+    JASPAR2022,
+    BSgenome.Hsapiens.UCSC.hg19,
+    BSgenome.Mmusculus.UCSC.mm10,
+    methods
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown

@@ -1,0 +1,9 @@
+.Rhistory
+.RData
+.Rproj.user
+*.Rproj
+.DS_Store
+docs/
+vignettes/*.html
+inst/doc
+*.tar.gz
