@@ -1,29 +1,29 @@
-# TFpredict.R
-## ÖĞÎÄÃèÊö£º¸øÒ»¸ö»ùÒò£¬È»ºóÌáÈ¡¶ÔÓ¦µÄÆô¶¯×ÓĞòÁĞ£¬Ê¹ÓÃJARSPR½øĞĞÔ¤²âÉÏÓÎµÄ×ªÂ¼Òò×Ó
+##  TFpredict.R
 
-Ô¤²â»ùÒòÆô¶¯×ÓÇøÓò×ªÂ¼Òò×Ó½áºÏÎ»µãµÄR°ü
+é¢„æµ‹åŸºå› å¯åŠ¨å­åŒºåŸŸè½¬å½•å› å­ç»“åˆä½ç‚¹çš„RåŒ…
+ä¸­æ–‡æè¿°ï¼šç»™ä¸€ä¸ªåŸºå› ï¼Œç„¶åæå–å¯¹åº”çš„å¯åŠ¨å­åºåˆ—ï¼Œä½¿ç”¨JARSPRè¿›è¡Œé¢„æµ‹ä¸Šæ¸¸çš„è½¬å½•å› å­
 
-## °²×°
+## å®‰è£…
 
 ```r
-# °²×°ÒÀÀµ
+# å®‰è£…ä¾èµ–
 if (!require("remotes")) install.packages("remotes")
 
-# ´ÓGitHub°²×°
+# ä»GitHubå®‰è£…
 remotes::install_github("yudonglin506311858/TFpredict.R", dependencies = TRUE)
-#Èí¼ş°²×°
+#è½¯ä»¶å®‰è£…
 library(devtools)
 install_github("yourusername/TFpredict.R")
 library(TFpredict.R)
 
 ```
 
-## Ê¹ÓÃÊ¾Àı
+## ä½¿ç”¨ç¤ºä¾‹
 ```r
 library(TFpredict)
 result <- TFpredict("GATA1", "human", 2000, 200)
 
-#Ê¾Àı
+#ç¤ºä¾‹
 target_gene <- c("GATA1")
 species <- c("human")
 promoter_start <- "2000"
@@ -35,7 +35,7 @@ TF <- TFpredict(target_gene = target_gene, species = species,
 
 ```
 
-## ½á¹ûÊ¾Àı
+## ç»“æœç¤ºä¾‹
 ```r
    JASPAR_ID Gene_Symbol Count                                  Sequences
 1   MA0130.1     ZNF354C     5 CTCCAC | ATCCAC | CTCCAC | CTCCAC | GTCCAC
