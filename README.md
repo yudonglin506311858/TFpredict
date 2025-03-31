@@ -9,28 +9,32 @@
 if (!require("remotes")) install.packages("remotes")
 
 # 从GitHub安装
-remotes::install_github("yudonglin506311858/TFpredict.R", dependencies = TRUE)
+remotes::install_github("yudonglin506311858/TFpredict", dependencies = TRUE)
 #软件安装
 library(devtools)
-install_github("yourusername/TFpredict.R")
+install_github("yudonglin506311858/TFpredict")
 library(TFpredict.R)
 
 ```
 
 ## 使用示例
 ```r
-library(TFpredict)
-result <- TFpredict("GATA1", "human", 2000, 200)
-
-#示例
-target_gene <- c("GATA1")
-species <- c("human")
-promoter_start <- "2000"
-promoter_end <- "200"
+library(BSgenome.Hsapiens.UCSC.hg19)
+library(BSgenome.Mmusculus.UCSC.mm10)
+library(JASPAR2022)
+library(TFBSTools)
+library(Biostrings)
+library(TFpredict.R)
+target_gene<-c("GATA1")
+species<-c("human")
+promoter_start<-2000
+promoter_end<-200
 min_score = "85%"
-TF <- TFpredict(target_gene = target_gene, species = species,
-                promoter_start = promoter_start, promoter_end = promoter_end,min_score = "85%")
-
+TF<-TFpredict(target_gene=target_gene, 
+              species=species,
+              promoter_start=promoter_start,
+              promoter_end=promoter_end,
+              min_score = "85%")
 
 ```
 
